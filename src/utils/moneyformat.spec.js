@@ -1,4 +1,4 @@
-const moneyFormat = require("./moneyformat")
+const moneyFormat = require("./moneyformat").default
 
 describe("moneyFormat", () => {
     it("works with two decimals", () => {
@@ -6,4 +6,3 @@ describe("moneyFormat", () => {
         expect(result).toEqual("$99.99")
     })
 })
-
