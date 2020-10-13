@@ -1,5 +1,3 @@
-const moneyFormat = (value) => {
-    return "$" + (value.toFixed(2))
-}
+const moneyFormat = (value) => "$" + (value.toFixed(2));
 
 export default moneyFormat
