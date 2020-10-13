@@ -1,6 +1,9 @@
 const moneyFormat = require("./moneyformat")
 
-console.log(moneyFormat(99.99))
-console.log(moneyFormat(250))
-console.log(moneyFormat(9500.95))
+describe("moneyFormat", () => {
+    it("works with two decimals", () => {
+        const result = moneyFormat(99.99)
+        expect(result).toEqual("$99.99")
+    })
+})
 
