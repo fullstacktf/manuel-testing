@@ -4,4 +4,3 @@ import { Censorer, TextFileReader, BannedWordsListFileReader, CensoredTextWriter
 const censorer = new Censorer(new TextFileReader(), new BannedWordsListFileReader(), new CensoredTextWriter())
 
 censorer.censor()
-
