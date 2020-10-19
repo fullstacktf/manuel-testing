@@ -1,4 +1,4 @@
-require("./BitCounting")
+const countBits = require("./BitCounting").default
 
 describe("Bit Counting", () => {
     it("Counts bits", () => {
