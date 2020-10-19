@@ -28,19 +28,19 @@ class BannedWordsListFileReaderFake extends BannedWordsListFileReader {
     }
 }
 
-
-
 describe("Censorer", () => {
     it("censors single words", () => {
         const originalText = "You're a nice person"
         const bannedWords = ["nice", "good"]
+        const censoredTextWriterFake = new CensoredTextWriterFake()
         const censorer = new Censorer(
             new TextFileReaderFake(originalText),
             new BannedWordsListFileReaderFake(bannedWords),
-            new CensoredTextWriterFake())
+            censoredTextWriterFake
+        )
 
         censorer.censor()
 
-        expect(censoredTextWriter.censoredText).toEqual("You're a XXXX person")
+        expect(censoredTextWriterFake.censoredText).toEqual("You're a XXXX person")
     })
 })
